@@ -6,7 +6,7 @@ function Signin() {
   const url = "https://todo-app-backend-lqd2.onrender.com";
   const [userDetail, setUserDetail] = useState({ email: "", password: "" });
   const [ermsg, setErrmsg] = useState("");
-  const registerNavigate = useNavigate();
+  const ItemNavigate = useNavigate();
   async function submit(e) {
     e.preventDefault();
     await fetch(`${url}/user/login`, {
@@ -22,7 +22,7 @@ function Signin() {
         if (data.status === "Success") {
           setToken("token", data.token);
           alert("Login Successfull");
-          registerNavigate("/items");
+          ItemNavigate("/items");
         } else {
           setErrmsg(data.message);
         }

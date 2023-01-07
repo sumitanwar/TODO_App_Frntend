@@ -1,0 +1,75 @@
+.Item_main_Container {
+  width: 1463px;
+  margin: auto;
+  height: 650px;
+  border: 2px solid black;
+}
+.todo_table {
+  display: inline-block;
+  height: 400px;
+  width: 1100px;
+  border: 2px solid black;
+  margin: 0px;
+  position: relative;
+  left: 77px;
+  bottom: 420px;
+  overflow-y: scroll;
+}
+#main_table {
+  margin: auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#main_table th {
+  border-left: 2px solid rgb(192, 2, 255);
+  background-color: rgb(174, 183, 183);
+  color: rgb(34, 33, 33);
+}
+#main_table th:nth-child(1) {
+  border-left: none;
+}
+#main_table td {
+  border-left: 2px solid rgb(192, 2, 255);
+  height: 40px;
+  width: 220px;
+}
+#main_table td:nth-child(1) {
+  border-left: none;
+}
+#main_table tbody {
+}
+#main_table tbody tr:nth-child(2n-1) {
+  background-color: rgb(66, 228, 243);
+}
+#main_table tbody tr:nth-child(2n) {
+  background-color: rgb(74, 244, 198);
+}
+#main_table tbody tr span {
+  display: inline-block;
+  margin: auto 10px;
+  border: 2px solid Black;
+  width: 90px;
+  border-radius: 5px;
+}
+#main_table tbody tr span:hover {
+  cursor: pointer;
+  background-color: yellow;
+}
+#Add_Activity_btn {
+  position: relative;
+  left: 1100px;
+  bottom: 900px;
+  height: 40px;
+  width: 150px;
+  font-size: 22px;
+  border-radius: 8px;
+  background-color: rgb(15, 110, 244);
+  color: white;
+}
+#Add_Activity_btn:hover {
+  cursor: pointer;
+  background-color: rgb(15, 217, 244);
+  color: rgb(25, 25, 27);
+  font-weight: bold;
+}

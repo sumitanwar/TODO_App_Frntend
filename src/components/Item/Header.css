@@ -1,0 +1,29 @@
+.header_container {
+  display: flex;
+  width: 1440px;
+  height: 100px;
+  border: 2px solid black;
+  margin: auto;
+  justify-content: right;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(21, 248, 0);
+  border-radius: 20px 20px 0px 0px;
+}
+.userName_container {
+  font-size: 40px;
+  margin-right: 1px;
+  border-top: 3px solid green;
+  border-left: 3px solid rgb(255, 55, 11);
+  border-right: 3px solid rgb(36, 36, 246);
+  border-bottom: 3px solid rgb(240, 8, 244);
+  height: 100%;
+  background-color: rgb(178, 244, 12);
+  border-radius: 10px;
+  box-shadow: -5px -1px 20px 15px rgb(0, 4, 255);
+}
+.header_container h1 {
+  margin: auto;
+
+  color: red;
+}

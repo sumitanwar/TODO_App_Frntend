@@ -12,25 +12,30 @@ function Register() {
     cpassword: "",
   });
   const registerNavigate = useNavigate();
+
   async function submit(e) {
     e.preventDefault();
-    await fetch(`${url}/user/register`, {
-      method: "POST",
-      body: JSON.stringify(userRegDetail),
-      headers: { "Content-Type": "application/json" },
-    })
-      .then((res) => {
-        return res.json();
+    if (userRegDetail.password === userRegDetail.cpassword) {
+      await fetch(`${url}/user/register`, {
+        method: "POST",
+        body: JSON.stringify(userRegDetail),
+        headers: { "Content-Type": "application/json" },
       })
-      .then((data) => {
-        console.log(data);
-        if (data.status === "Success") {
-          alert("Registeration Successfull");
-          registerNavigate("/");
-        } else {
-          setregErrmsg(data.message);
-        }
-      });
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          console.log(data);
+          if (data.status === "Success") {
+            alert("Registeration Successfull");
+            registerNavigate("/");
+          } else {
+            setregErrmsg(data.message);
+          }
+        });
+    } else {
+      setregErrmsg("Password Does Not Matched");
+    }
   }
   return (
     <>
