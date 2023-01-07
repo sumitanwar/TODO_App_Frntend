@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./register.css";
 import { getToken, setToken } from "../authenticate/Auth";
 function Register() {
-  const url = "http://localhost:8080";
+  const url = "https://todo-app-backend-lqd2.onrender.com";
   const [regermsg, setregErrmsg] = useState("");
   const [userRegDetail, setUserRegDetail] = useState({
     name: "",
